@@ -24,3 +24,6 @@ __pycache__
 
 .coverage
 .env
+
+# pyenv
+.python-version

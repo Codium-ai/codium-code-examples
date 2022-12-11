@@ -1,7 +1,7 @@
 from __future__ import absolute_import, print_function
 import sys
 
-from src.colors.colors_utils import *
+from examples.colors.colors_utils import *
 
 _PY2 = sys.version_info[0] == 2
 

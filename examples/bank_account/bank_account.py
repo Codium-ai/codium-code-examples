@@ -37,7 +37,7 @@ class BankAccount:
         amount_including_commission = amount + self._commission_rate
         if self._balance >= amount_including_commission > 0:
             self._balance -= amount_including_commission
-            other_account.balance += amount
+            other_account._balance += amount
         else:
             raise ValueError("Insufficient funds for transfer")
 

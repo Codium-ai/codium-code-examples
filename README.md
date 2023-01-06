@@ -82,4 +82,4 @@ _You can now close the browser tab_
 - Terms of use: https://www.codium.ai/terms-of-use
 - Privacy policy: https://www.codium.ai/platform-privacy-policy
 
-Please notice - Like other popular tools (such as copilot), we also send code snippets to our servers.
+Please notice - Like other popular generative-AI tools (such as copilot), we also send code snippets to our servers.

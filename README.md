@@ -1,4 +1,6 @@
-# Code fast with CodiumAI
+# CodiumAI - Meaningful tests for busy devs
+
+[![Closed Alpha](https://raw.githubusercontent.com/Codium-ai/codium-code-examples/main/media/docs/Closedalphabanner.png)](https://www.codium.ai/#Contact-us)
 
 ---
 
@@ -6,9 +8,9 @@
 
 ---
 
-![How it works](./media/docs/TestGeneration.gif?raw=true)
+![How it works](https://raw.githubusercontent.com/Codium-ai/codium-code-examples/main/media/docs/Generatetests013_org_long.gif)
 
-_Closed Alpha Version 0.0.13_
+_Closed Alpha Version 1.0.0 - Supported in VSCode version 1.58.0 and above_
 
 ## Features
 
@@ -28,58 +30,71 @@ By creating comprehensive test suites, our tool helps you catch and fix bugs ear
 
 ## Installing / Getting started
 
-1. Open extensions manager (Shift+CMD+X on Mac, Shift+CTRL+X on Windows), go to more actions elypsis button in the top right corner of the extensions panel, and select Install from VSIX.
+![Install](https://raw.githubusercontent.com/Codium-ai/codium-code-examples/main/media/docs/Step1.png)
+<br>
 
-![Install VSIX file](./media/docs/Step1.png)
+![Successful installation](https://raw.githubusercontent.com/Codium-ai/codium-code-examples/main/media/docs/Step2.png)
+<br>
 
-2. Navigate and select the codium-0.0.13.vsix file.
+![Github Login page step one](https://raw.githubusercontent.com/Codium-ai/codium-code-examples/main/media/docs/Step3.png)
+<br>
 
-3. You should now receive a successful installation and sign in notification on the bottom of the VSCode editor. Click "Sign in" button in the notification popup to activate Codium with your Github account.
+![Github Login page step two](https://raw.githubusercontent.com/Codium-ai/codium-code-examples/main/media/docs/Step4.png)
+<br>
 
-![Successful installation](./media/docs/installed.png)
+![Generate tests](https://raw.githubusercontent.com/Codium-ai/codium-code-examples/main/media/docs/Step5.png)
+<br>
 
-![Sign in notification](./media/docs/signin.png)
+![Codium tab opens](https://raw.githubusercontent.com/Codium-ai/codium-code-examples/main/media/docs/Step6.png)
+<br>
+
+![Review and edit samples](https://raw.githubusercontent.com/Codium-ai/codium-code-examples/main/media/docs/Step7.png)
+<br>
+
+![Redo tests](https://raw.githubusercontent.com/Codium-ai/codium-code-examples/main/media/docs/Step8.png)
+<br>
+
+1. After installation, you should receive a notification on the bottom of the VSCode editor. Click "Sign in" button in the notification popup to activate Codium with your GitHub account.
 
 > If you can't see the notification on the bottom right of the editor window, click the button labeled Codium in the bottom status bar.
 
-4. You will be redirected to the Github login page and once you confirm the activation you should be redirected back to the editor. Status notification should show your Github username when the activation was successful.
+2. You will be redirected to the GitHub login page.
 
-![Github Login page setp one](./media/docs/auth1.png)
-![Github Login page setp two](./media/docs/auth2.png)
-![Github Login page setp three](./media/docs/auth3.png)
+3. Once you confirm the activation you should be redirected back to the editor. Status notification should show your GitHub username when the activation was successful.
+
+4. Open existing Python file or write a new Python class/function and press the "Generate Tests" on top of the class/function.
+
+5. A new tab will open in your VSCode IDE with the generated tests, along with your code description and test strategies description.
+
+6. Review tests and edit tests strategies to improve the quality of the next tests generation.
+
+7. Use "Redo tests" to refine your tests according to your edits.
+
+8. "Accept" to add the generated tests to a new file.
+
+> Tip 1: If you can't see the `Generate Tests` button you might have to set `"editor.codeLens": true,` in your VSCode configuration file.
+> Tip 2: You can show and hide Codium panel in the extension settings or from the command palette.
+
+![Tip show panel](https://raw.githubusercontent.com/Codium-ai/codium-code-examples/main/media/docs/Tip1.png)
 <br>
-_You can now close the browser tab_
-![Close the browser tab](./media/docs/auth4.png)
-
-5. Write Python a class or function in a new file.
-6. Press the "Generate Tests" on top of the function or use the shortcut SHIFT+CMD+CTRL+C on Mac or ALT+CTRL+SHIFT+C on Windows.
-
-![Github Login page setp one](./media/docs/generateButtons.png)
-
-7. A new tab will open in your VSCode IDE with the generated tests, along with your code description and test strategies description.
-8. Review and edit the tests and code description to improve the quality of the next tests generation (coming soon).
-9. Press "regenerate tests" and let the machine learning to refine your tests, based on your changes (coming soon).
-10. Save the tests when CodiumAI covered all the use cases.
-
-> Tip: You can switch on and off the Generate Tests button by adding this setting to your configuration file `"editor.codeLens": false/true,`
 
 ## How to uninstall
 
 1. Select "Codium" button in the bottom status bar.
 2. Hover over the authentication notification, select the settings icon and "Manage Extension" option from the dropdown.
-
-![How to uninstall](./media/docs/uninstallS1.png)
-
-3. Codium Extension will open in a new tab. Select Unistall and Reload VSCode.
+3. Codium Extension will open in a new tab. Select Uninstall and Reload VSCode.
 
 ## Links
 
-- Project homepage: https://codium.ai
-- BLog: https://www.codium.ai/blog
+[![Join our Discord community](https://raw.githubusercontent.com/Codium-ai/codium-code-examples/main/media/docs/Joincommunity.png)](https://discord.gg/TqNxGqFW)
 
-## Licensing
+- Discord community: https://discord.gg/TqNxGqFW
+- Code examples: https://github.com/Codium-ai/codium-code-examples
+- Project homepage: https://codium.ai
+- Blog: https://www.codium.ai/blog
+
+## Terms of use
 
 - Terms of use: https://www.codium.ai/terms-of-use
 - Privacy policy: https://www.codium.ai/platform-privacy-policy
-
-Please notice - Like other popular generative-AI tools (such as copilot), we also send code snippets to our servers.
+- Please notice - similar to other popular generative-AI tools (such as copilot), we also transmit code snippets to our servers.

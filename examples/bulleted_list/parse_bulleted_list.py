@@ -7,8 +7,9 @@ def parse_bullet_list(list_str: str) -> Optional[List[str]]:
             return []
         if list_str.strip() == "":
             return []
+        list_str = list_str.replace("\n*", "\n-").replace("\n%", "\n-")
         items = list_str.split("\n-")
-        items = [line.strip().strip("- \n\t") for line in items]
+        items = [line.strip().strip("- \n\t").strip("* \n\t").strip("% \n\t") for line in items]
         items = [line for line in items if line != ""]
         if len(items) == 0:
             return []

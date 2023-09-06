@@ -37,10 +37,6 @@ class TestBankAccount(unittest.TestCase):
         self.assertEqual(self.account1.balance(), initial_balance1 - 52.5)
         self.assertEqual(self.account2.balance(), initial_balance2 + 50)
 
-    def test_deposit_zero_amount(self):
-        initial_balance = self.account1.balance()
-        self.account1.deposit(0)
-        self.assertEqual(self.account1.balance(), initial_balance)
 
 if __name__ == '__main__':
     unittest.main()

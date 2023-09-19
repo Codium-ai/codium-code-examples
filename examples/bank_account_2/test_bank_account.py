@@ -37,3 +37,14 @@ class TestBankAccount2:
         self.account1.transfer_to_other_account(50, self.account2)
         assert self.account1.balance() == initial_balance1 - 52.5
         assert self.account2.balance() == initial_balance2 + 50
+
+
+
+class TestBankAccountSimpson:
+    def setup_method(self):
+        self.homer = BankAccount2("Homer", True)
+        self.marge = BankAccount2("Marge", False)
+    
+    def test_deposit_negative_amount(self):
+        with pytest.raises(ValueError):
+            self.homer.deposit(-100)

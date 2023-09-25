@@ -19,11 +19,12 @@ jobs:
     steps:
       - name: PR Agent action step
         id: pragent
-        uses: Codium-ai/pr-agent@v0.7
+        uses: Codium-ai/pr-agent@main
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           OPENAI_ORG: ${{ secrets.OPENAI_ORG }} # optional
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_action.auto_describe: 'true'
 
 
 

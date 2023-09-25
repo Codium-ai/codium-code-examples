@@ -25,6 +25,7 @@ jobs:
           OPENAI_ORG: ${{ secrets.OPENAI_ORG }} # optional
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           github_action.auto_describe: 'true'
+          github_action.auto_improve: 'true'
 
 
 

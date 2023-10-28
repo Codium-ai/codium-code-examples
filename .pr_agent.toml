@@ -1,3 +1,5 @@
+enable_custom_labels = true
+
 [pr_description]
 add_original_user_description = true
 keep_original_user_title = false

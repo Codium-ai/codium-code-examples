@@ -1,3 +1,3 @@
 [pr_description]
-add_original_user_description = false
+add_original_user_description = true
 keep_original_user_title = false

@@ -1,20 +1,13 @@
 [config]
-enable_custom_labels=false
+enable_custom_labels=true
 
-[custom_labels."Bug fix"]
-description = "Fixes a bug in the code"
-[custom_labels."Tests"]
-description = "Adds or modifies tests"
-[custom_labels."Bug fix with tests"]
-description = "Fixes a bug in the code and adds or modifies tests"
-[custom_labels."Refactoring"]
-description = "Code refactoring without changing functionality"
-[custom_labels."Enhancement"]
-description = "Adds new features or functionality"
-[custom_labels."Documentation"]
-description = "Adds or modifies documentation"
-[custom_labels."Other"]
-description = "Other changes that do not fit in any of the above categories"
+[custom_labels."Good PR"]
+description = "A good PR"
+[custom_labels."Medium PR"]
+description = "A medium PR"
+[custom_labels."Bad PR"]
+description = "A bad PR"
+
 
 [pr_description]
 add_original_user_description = true

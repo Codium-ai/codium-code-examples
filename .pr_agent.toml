@@ -7,7 +7,10 @@ description = "A good PR"
 description = "A medium PR"
 [custom_labels."Bad PR"]
 description = "A bad PR"
-
+[custom_labels."Code PR"]
+description = "PR that contains code changes"
+[custom_labels."documentation PR"]
+description = "PR that contains documentation changes"
 
 [pr_description]
 add_original_user_description = true

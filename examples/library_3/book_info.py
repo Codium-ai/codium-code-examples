@@ -1,5 +1,7 @@
+from dataclasses import dataclass
+
+@dataclass()
 class BookInfo:
-    def __init__(self, uid, title, author, publication_date):
-        self.uid = uid
-        self.title = title
-        self.author = author
+    uid: str
+    title: str
+    author: str

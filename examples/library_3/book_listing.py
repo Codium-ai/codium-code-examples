@@ -1,4 +1,9 @@
-class BookListing(BookInfo):
-    def __init__(self, title, author, publication_date, available_count):
-        super().__init__(title, author, publication_date)
-        self.available_count = available_count
+from dataclasses import dataclass
+
+from examples.library_3.book_info import BookInfo
+
+@dataclass()
+class BookListing:
+    uid: str
+    book_info: BookInfo
+    existing_copies_count: int

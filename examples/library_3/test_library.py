@@ -1,5 +1,6 @@
 from examples.library_3.admin import Admin
 from examples.library_3.book_info import BookInfo
+from examples.library_3.book_inventory_listing import BookInventoryListing
 from examples.library_3.book_listing import BookListing
 from examples.library_3.member import Member
 from examples.library_3.librarian import Librarian
@@ -42,7 +43,7 @@ class TestLibrary3:
             author="Dracula",
             title="Yummy Humans",
             )
-        book_listing = BookListing(
+        book_listing = BookInventoryListing(
             uid="book-listing-uid-1",
             book_info=book_info,
             existing_copies_count=3,
@@ -55,7 +56,31 @@ class TestLibrary3:
     
     def test_user_can_borrow_book(self):
         admin_mgmt = self.library.get_admin_management(self.root_user)
-        member_created = admin_mgmt.new_user(UserRole.MEMBER, "Willow", "its-magic")
+        librarian = admin_mgmt.new_user(UserRole.LIBRARIAN, "Giles", "watcher-on-the-wall")
+        member = admin_mgmt.new_user(UserRole.MEMBER, "Willow", "its-magic")
+
+        librarian_book_mgmt = self.library.get_librarian_book_management(librarian)
+
+        book_info = BookInfo(
+            uid="book-info-uid-1",
+            author="Dracula",
+            title="Yummy Humans",
+            )
+        book_listing = BookInventoryListing(
+            uid="book-listing-uid-1",
+            book_info=book_info,
+            existing_copies_count=3,
+            )
+        librarian_book_mgmt.add_book(book_listing)
+
+        member_book_mgmt = self.library.get_member_book_management(member)
+
+        borrow = member_book_mgmt.borrow_book(book_listing.uid)
+
+        assert borrow is not None
+
+
+        
 
 
         

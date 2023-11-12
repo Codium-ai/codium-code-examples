@@ -8,21 +8,28 @@ from examples.library_3.permissions import (
 class Library3:
     def __init__(
             self,
-            librarian_book_management,
-            # user_book_management,
+            librarian_book_management_factory,
+            member_book_management_factory,
             # user_management,
             admin_management_factory,
             # audit_log,
             ):
-        self.librarian_book_management = librarian_book_management
+        self._librarian_book_management_factory = librarian_book_management_factory
+        self._member_book_management_factory = member_book_management_factory
         # self.user_book_management = None
         # self.user_management = None
         self._admin_management_factory = admin_management_factory
         # self.audit_log = None
     
-    def get_librarian_book_management(self, user):
-        if is_librarian(user):
-            return self.librarian_book_management
+    def get_librarian_book_management(self, acting_user):
+        if is_librarian(acting_user):
+            return self._librarian_book_management_factory.get_librarian_book_management(acting_user)
+        else:
+            raise Exception("User is not authorized to access LibrarianBookManagement")
+    
+    def get_member_book_management(self, acting_user):
+        if is_member(acting_user):
+            return self._member_book_management_factory.get_member_book_management(acting_user)
         else:
             raise Exception("User is not authorized to access LibrarianBookManagement")
 

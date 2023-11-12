@@ -1,8 +1,10 @@
 class LibrarianBookManagement:
     def __init__(self,
+        acting_user,
         library_book_db,
         book_borrowing_db,
         ):
+        self._acting_user = acting_user
         self._library_book_db = library_book_db
         self._book_borrowing_db = book_borrowing_db
 
@@ -11,7 +13,6 @@ class LibrarianBookManagement:
 
 
     def find_books(self, author=None, title=None):
-        # Find books by author, title or both
         return self._library_book_db.find_books(author, title)
 
     def borrow_book(self, book, user):

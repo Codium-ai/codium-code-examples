@@ -2,7 +2,7 @@
 import unittest
 
 from .bank_account_2 import BankAccount2
-
+ 
 class TestBankAccount(unittest.TestCase):
     def setUp(self):
         self.account1 = BankAccount2("John", True)

@@ -2,10 +2,12 @@
 enable_custom_labels=true
 
 [custom_labels."Tests"]
-description = "Adds or modifies tests.
+description = """
+Adds or modifies tests.
 Example code:
 def test_this():
-  return False"
+  return False
+"""
 [custom_labels."No Tests"]
 description = "PR doesn't includes tests"
 

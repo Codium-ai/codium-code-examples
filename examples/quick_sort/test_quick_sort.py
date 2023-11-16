@@ -1,5 +1,5 @@
 import pytest
-from examples.bubble_sort.quick_sort import qsort
+from examples.quick_sort.quick_sort import qsort
 
 class TestQuickSort:
     @pytest.mark.parametrize(

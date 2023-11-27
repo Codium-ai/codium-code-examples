@@ -14,3 +14,7 @@ description = "PR doesn't includes tests"
 [pr_description]
 add_original_user_description = true
 keep_original_user_title = false
+
+[pr_reviewer] # /review #
+num_code_suggestions=2
+inline_code_comments = true

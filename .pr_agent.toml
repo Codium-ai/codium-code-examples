@@ -18,3 +18,6 @@ keep_original_user_title = false
 [pr_reviewer] # /review #
 num_code_suggestions=2
 inline_code_comments = true
+extra_instructions="""\
+make sure @tal_ridnik is tagged in the PR description body. if not, give an alert.
+"""

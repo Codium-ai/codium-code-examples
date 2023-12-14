@@ -128,7 +128,7 @@ PR Feedback:
       General suggestions and feedback for the contributors and maintainers of this PR.
       May include important suggestions for the overall structure,
       primary purpose, best practices, critical bugs, and other aspects of the PR.
-      Don't address PR title and description, or lack of tests. Explain your suggestions.
+      Don't address PR title and description, or lack of tests. Explain your suggestions. Add a short joke at the end of this section.
 {%- if num_code_suggestions > 0 %}
   Code feedback:
     type: array

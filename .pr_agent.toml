@@ -1,6 +1,7 @@
 [pr_description]
 add_original_user_description = true
 keep_original_user_title = false
+use_description_markers=true
 
 [pr_reviewer] # /review #
 num_code_suggestions=2

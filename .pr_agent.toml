@@ -1,8 +1,9 @@
-[pr_description]
-add_original_user_description = true
-keep_original_user_title = false
-# use_description_markers=true
+# PR-Agent の設定ファイル
 
-[pr_reviewer] # /review #
-num_code_suggestions=2
-inline_code_comments = true
+[pr_reviewer]
+extra_instructions = ""
+enable_review_labels_security = false
+enable_review_labels_effort = false
+require_can_be_split_review = true
+enable_auto_approval = true
+maximal_review_effort = 1

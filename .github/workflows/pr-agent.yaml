@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: PR Agent action step
         id: pragent
-        uses: codiumai/pr-agent:0.24-github_action
+        uses: docker://codiumai/pr-agent:0.24-github_action
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           OPENAI_ORG: ${{ secrets.OPENAI_ORG }} # optional

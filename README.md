@@ -93,8 +93,6 @@ By creating comprehensive test suites, our tool helps you catch and fix bugs ear
 - Project homepage: https://codium.ai
 - Blog: https://www.codium.ai/blog
 
-## Terms of use
 
-- Terms of use: https://www.codium.ai/terms-of-use
-- Privacy policy: https://www.codium.ai/platform-privacy-policy
-- Please notice - similar to other popular generative-AI tools (such as copilot), we also transmit code snippets to our servers.
+## Copyright
+- Do not copy this or else

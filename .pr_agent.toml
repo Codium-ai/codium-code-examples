@@ -1,4 +1,4 @@
-# PR-Agent の設定ファイル
+aaa=3
 
 [pr_reviewer]
 extra_instructions = ""

@@ -1,4 +1,4 @@
-# CodiumAI - Meaningful tests for busy devs
+#  Meaningful tests for busy devs
 
 [![Closed Alpha](https://raw.githubusercontent.com/Codium-ai/codium-code-examples/main/media/docs/Closedalphabanner.png)](https://www.codium.ai/#Contact-us)
 

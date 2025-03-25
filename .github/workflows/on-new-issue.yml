@@ -7,13 +7,21 @@ on:
   issue_comment:
     types: [created] #Comment either on issue or on pull-request
 
+    # Read env. variables
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_API_URL: ${{ github.api_url }}
+  ISSUE_URL: ${{ github.event.issue.html_url || github.event.comment.html_url }}
+  ISSUE_BODY: ${{ github.event.issue.body || github.event.comment.body }}
+  OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+
 # The actual set of actions
 jobs:
   dump: #For debugging
     runs-on: ubuntu-latest
     steps:
     - name: $github
-      run:   echo "$GITHUB_CONTEXT"
+      run:   echo "GitHub ctx=$GITHUB_CONTEXT \n\n GITHUB_API_URL=$GITHUB_API_URL \n ISSUE_URL=$ISSUE_URL \n ISSUE_BODY=$ISSUE_BODY"
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
 
@@ -26,28 +34,23 @@ jobs:
       contents: read    # For reading repository contents
       issues: write     # For commenting on issues
 
-    # Read env. variables
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      GITHUB_API_URL: ${{ github.api_url }}
-      ISSUE_URL: ${{ github.event.issue.html_url || github.event.comment.html_url }}
-      ISSUE_BODY: ${{ github.event.issue.body || github.event.comment.body }}
-      OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
-
     steps:
+      - name: dry run
+        run:   echo "Github ctx=$GITHUB_CONTEXT" && echo "\nGITHUB_API_URL=$GITHUB_API_URL" && echo "\nISSUE_URL=$ISSUE_URL"
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }} #For DBG
       - name: Run PR Agent on Issues
-        if: ${{ env.ISSUE_URL != '' }}
+        if: ${{ ISSUE_URL != '' }}
         uses: docker://codiumai/pr-agent:latest
         with:
           entrypoint: /bin/bash #Replace invoking cli.py directly with a shell
           args: |
             -c "cd /app && \
             echo 'Running Issue Agent action step' && \
-            echo 'ISSUE_URL=$ISSUE_URL' && \
-            export config__git_provider='github' && \
-            export github__token=$GITHUB_TOKEN && \
-            export github__api_url=$GITHUB_API_URL && \
-            export github__graphql_url=$GITHUB_GRAPHQL_URL && \
-            export openai__key=$OPENAI_KEY && \
+            echo 'ISSUE_URL=$env.ISSUE_URL' && \
+            export GIT_PROVIDER='github' && \
+            export GITHUB.USER_TOKEN=$GITHUB_TOKEN && \            
+            export GITHUB.BASE_URL=$GITHUB_TOKEN && \
+            export OPENAI.KEY=$OPENAI_KEY && \
             python -m pr_agent.cli --issue_url='$ISSUE_URL' help_docs '$ISSUE_BODY'"
 

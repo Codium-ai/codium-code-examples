@@ -9,14 +9,6 @@ on:
 
 # The actual set of actions
 jobs:
- dump: #For debugging
-  runs-on: ubuntu-latest
-  steps:
-  - name: $github
-    run:   echo "$GITHUB_CONTEXT"
-    env:
-     GITHUB_CONTEXT: ${{ toJson(github) }}
-
   issue_agent:
     runs-on: ubuntu-latest
     if: ${{ github.actor != 'dependabot[bot]' && github.actor != 'github-actions[bot]' && !endsWith(github.actor, '[bot]') }} #Do not run any of the commands if trigger was a bot.

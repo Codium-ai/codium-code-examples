@@ -40,7 +40,7 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }} #For DBG
       - name: Run PR Agent on Issues
-        if: ${{ ISSUE_URL != '' }}
+        if: ${{ env.ISSUE_URL != '' }}
         uses: docker://codiumai/pr-agent:latest
         with:
           entrypoint: /bin/bash #Replace invoking cli.py directly with a shell

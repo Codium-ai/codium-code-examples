@@ -38,5 +38,6 @@ jobs:
             export github__user_token=$GITHUB_TOKEN && \            
             export github__base_url=$GITHUB_API_URL && \
             export openai__key=$OPENAI_KEY && \
+            export config__verbosity_level=2 && \
             python -m pr_agent.cli --issue_url=$ISSUE_URL help_docs '$ISSUE_BODY'"
 

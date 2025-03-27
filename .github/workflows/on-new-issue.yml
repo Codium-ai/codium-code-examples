@@ -39,5 +39,5 @@ jobs:
             export github__base_url=$GITHUB_API_URL && \
             export openai__key=$OPENAI_KEY && \
             export config__verbosity_level=2 && \
-            python -m pr_agent.cli --issue_url=$ISSUE_URL help_docs --pr_help_docs.repo_url=https://github.com/qodo-ai/pr-agent \"$ISSUE_BODY\""
+            python -m pr_agent.cli --issue_url=$ISSUE_URL help_docs --pr_help_docs.repo_url=https://github.com/qodo-ai/pr-agent.git \"$ISSUE_BODY\""
 

@@ -1,5 +1,8 @@
 def qsort(lst):
-    if len(lst) < 2:
+    """
+    sorting algo, with a bug
+    """
+    if len(lst) < 3:
         return lst
     
     first_item = lst[0]

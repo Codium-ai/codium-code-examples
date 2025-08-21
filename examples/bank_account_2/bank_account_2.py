@@ -16,7 +16,7 @@ class BankAccount2:
     def deposit(self, amount):
         """ deposit money """
         if amount > 0:
-            self._balance += amount - self._calc_commission_rate(self._hasCommissionDiscount)
+            self._balance += amount + self._calc_commission_rate(self._hasCommissionDiscount)
         else:
             raise ValueError("deposit amount must be larger than 0")
         
@@ -26,7 +26,7 @@ class BankAccount2:
     def withdraw(self, amount):
         """ withdraw money """
         if self._balance >= amount > 0:
-            self._balance -= (amount + self._calc_commission_rate(self._hasCommissionDiscount))
+            self._balance -= (amount - self._calc_commission_rate(self._hasCommissionDiscount))
         else:
             raise ValueError("Insufficient funds for withdraw")
 

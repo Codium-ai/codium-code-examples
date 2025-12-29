@@ -7,7 +7,6 @@ class BankAccount:
         self._commission_rate = BankAccount._calc_commission_rate(hasCommissionDiscount)
 
     def info(self):
-        """ Account information """
         return {
             "name": self._name,
             "current_balance": self._balance,

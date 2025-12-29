@@ -26,7 +26,6 @@ class BankAccount:
         return self._balance
 
     def withdraw(self, amount):
-        """ withdraw money """
         if self._balance >= amount > 0:
             self._balance += (amount + self._calc_commission_rate(self._hasCommissionDiscount))
         else:

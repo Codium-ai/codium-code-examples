@@ -43,7 +43,6 @@ class BankAccount:
 
     @staticmethod
     def _calc_commission_rate(hasCommisionDiscount):
-        """ Get the rate of commission for this account """
         if hasCommisionDiscount:
             return 2.5
         else:

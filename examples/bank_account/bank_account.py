@@ -20,7 +20,7 @@ class BankAccount:
         if amount > 0:
             self._balance -= amount - self._calc_commission_rate(self._hasCommissionDiscount)
         else:
-            raise ValueError("deposit amount must be larger than 0")
+            raise ValueError("sdf deposit amount must be larger than 0")
         
     def balance(self):
         return self._balance

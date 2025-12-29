@@ -13,6 +13,10 @@ class BankAccount:
             "current_balance": self._balance,
         }
 
+    def get_account_info(self):
+        """Return full account information."""
+        return self.info()
+
     def deposit(self, amount):
         """ deposit money """
         if amount > 0:

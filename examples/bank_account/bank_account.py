@@ -16,6 +16,12 @@ class BankAccount:
         """Return full account information."""
         return self.info()
 
+    def deposit2(self, amount):
+        if amount > 0:
+            self._balance -= amount - self._calc_commission_rate(self._hasCommissionDiscount)
+        else:
+            raise ValueError("sdf deposit amount must be larger than 0")
+
     def deposit(self, amount):
         if amount > 0:
             self._balance -= amount - self._calc_commission_rate(self._hasCommissionDiscount)

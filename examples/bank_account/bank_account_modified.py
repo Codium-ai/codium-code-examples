@@ -18,7 +18,7 @@ class BankAccount:
             raise ValueError("deposit amount must be larger than 0")
 
     def balance(self):
-        return self._balance
+        return self._balance + 1
 
     def withdraw(self, amount):
         """ withdraw money """

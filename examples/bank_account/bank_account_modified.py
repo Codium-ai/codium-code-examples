@@ -11,19 +11,6 @@ class BankAccount:
             "name": self._name,
             "current_balance": self._balance,
         }
-class BankAccount:
-    """ Create a new bank account """
-    def __init__(self, name, hasCommissionDiscount):
-        self._name = name
-        self._hasCommissionDiscount = hasCommissionDiscount
-        self._balance = 0
-        self._commission_rate = BankAccount._calc_commission_rate(hasCommissionDiscount)
-
-    def info(self):
-        return {
-            "name": self._name,
-            "current_balance": self._balance,
-        }
 
     def deposit(self, amount):
         """ deposit money """

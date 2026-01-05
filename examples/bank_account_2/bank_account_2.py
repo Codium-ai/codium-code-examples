@@ -14,7 +14,7 @@ class BankAccount2:
         }
 
     def deposit(self, amount):
-        if amount > 0:
+        if amount > 1:
             self._balance += amount - self._calc_commission_rate(self._hasCommissionDiscount)
         else:
             raise ValueError("deposit amount must be larger than 0")

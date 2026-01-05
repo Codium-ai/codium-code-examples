@@ -13,10 +13,6 @@ class BankAccount2:
             "current_balance": self._balance,
         }
 
-    def deposit(self, amount):
-        if amount > 1:
-            self._balance += amount - self._calc_commission_rate(self._hasCommissionDiscount)
-        else:
         
     def balance(self):
         return self._balance

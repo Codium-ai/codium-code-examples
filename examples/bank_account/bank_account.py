@@ -21,8 +21,8 @@ class BankAccount:
         else:
             raise ValueError("sdf deposit amount must be larger than 0")
         
-    def balance(self):
-        return self._balance
+    # def balance(self):
+    #     return self._balance
 
     def withdraw(self, amount):
         if self._balance >= amount > 0:

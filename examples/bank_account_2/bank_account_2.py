@@ -18,8 +18,8 @@ class BankAccount2:
             self._balance += amount - self._calc_commission_rate(self._hasCommissionDiscount)
         else:
         
-    # def balance(self):
-    #     return self._balance
+    def balance(self):
+        return self._balance
 
     def withdraw(self, amount):
         """ withdraw money """

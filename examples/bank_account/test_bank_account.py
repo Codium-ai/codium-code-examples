@@ -4,7 +4,7 @@ from examples.bank_account.bank_account import BankAccount
 
 
 def test_deposit_applies_commission_and_records_transaction():
-    acc = BankAccount("Alice", has_commission_discount=False)
+    acc = BankAccount("Alice2", has_commission_discount=False)
     acc.deposit("100.00")
     assert acc.balance() == Decimal("95.00")
     history = acc.get_transaction_history()

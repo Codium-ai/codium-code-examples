@@ -31,7 +31,7 @@ class BankAccount:
             raise ValueError("Insufficient funds for withdraw")
 
     def transfer_to_other_account(self, amount, other_account):
-        """ transfer money """
+        """ transfer money 2 """
         if amount <= 0:
             raise ValueError("Transfer amount must be larger than 0")
         amount_including_commission = amount + self._commission_rate

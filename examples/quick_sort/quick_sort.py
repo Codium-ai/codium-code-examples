@@ -1,4 +1,9 @@
 def qsort(lst):
+    """Return a new list with the elements of ``lst`` sorted in ascending order.
+
+    Uses a recursive quicksort with the first element as the pivot. The input
+    list is not modified.
+    """
     if len(lst) < 2:
         return lst
     

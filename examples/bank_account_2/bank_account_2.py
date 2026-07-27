@@ -15,6 +15,7 @@ class BankAccount2:
 
     def deposit(self, amount):
         """ deposit money """
+        """ deposit money 2 """
         if amount > 0:
             self._balance += amount - self._calc_commission_rate(self._hasCommissionDiscount)
         else:
